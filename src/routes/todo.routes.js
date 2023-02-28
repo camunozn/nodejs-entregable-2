@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', async (req, res) => {
   try {
     const todos = await Todo.findAll({
-      attributes: ['id', 'name', 'email'],
+      attributes: ['id', 'title', 'description', 'status'],
     });
     res.json(todos);
   } catch (err) {
